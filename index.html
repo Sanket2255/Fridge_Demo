@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title> Godrej - Web AR Experience</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  
+  <!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#0048a5">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="generator" content="Verge3D 4.1.1">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#0048a5">
+  <meta name="theme-color" content="#ffffff">
+
+
+  
+  <script src="v3d.js"></script>
+  <script src="Edge_WM.js"></script>
+   <script src="main.js"></script>
+   
+     <link rel="stylesheet" type="text/css" href="Edge_WM.css">
+   
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	 <script>
+		$(document).ready(function() {
+			var ua = navigator.userAgent;
+			var preloaderInterval = setInterval(checkPreloader, 500);
+	
+			function checkPreloader() {
+				if ($('.v3d-simple-preloader-logo').length) {
+					$('#btnEnterARIOS_1').hide();
+					$('#btnEnterARIOS_2').hide();
+					$('#btnEnterARIOS_3').hide();
+				} else {
+					if (/iPhone/.test(ua)) {
+						if (/CriOS/.test(ua)) {
+							// Hide iOS AR buttons, show Chrome button
+							$('#btnEnterARIOS_1').hide();
+							$('#btnEnterARIOS_2').hide();
+							$('#btnEnterARIOS_3').show();
+						} else if (/Safari/.test(ua) && !/CriOS/.test(ua)) {
+							// Event listener for btn_1
+							$('#btn_1').on('click', function() {
+								$('#btnEnterARIOS_1').show();
+								$('#btnEnterARIOS_2').hide();
+							});
+
+							// Event listener for btn_2
+							$('#btn_2').on('click', function() {
+								$('#btnEnterARIOS_1').hide();
+								$('#btnEnterARIOS_2').show();
+							});
+						}
+					}
+					// Show btnEnterARIOS_2 if btn_1 and btn_2 are not clicked
+					if (!$('#btnEnterARIOS_1').is(':visible') && !$('#btnEnterARIOS_2').is(':visible') && !/CriOS/.test(ua) && !/Android/.test(ua)) {
+						$('#btnEnterARIOS_2').show();
+					}
+				}
+			}
+		});
+	</script>
+	 
+	 <script src="js/custom.js"></script>
+	 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+	<link rel="shortcut icon" href="godrej.png" type="image/png" />
+	
+	
+	 <style>
+    video {
+      object-fit: cover;
+    }
+
+     video {
+        height: 100%;
+		width: 100%;
+      }
+	  
+	  .newtop{top:10px !important; z-index:999999 !important;}
+
+	  .custom_slider .newimg {width: auto !important;  height: 310px !important;}
+	  
+	  .newinst {top:265px !important;}
+	  
+	 /* .v3d-canvas{background:#f2f2f2 !important;} */
+	  
+	  
+  </style>
+
+</head>
+
+<body>
+
+<video style='display:none' playsinline autoplay  id='camera'></video>
+
+	<div class="company_name" id="company_name">
+		<div class="wrapper">
+			<img src="images/logo.svg" />
+			<div class="product_name">Godrej Vogue Refrigerator</div>
+		</div>
+	</div>
+	
+	<div class="button_group" id="button_group"  style="display:none;">
+	
+		<!-- Below code is for only iOS AR and it should be exactly like as per below except file name.reality --->
+		<a class="ar_btn unselectable" rel="ar" id="btnEnterARIOS_1"  href="Model/Fridge_Iphone_Mat1.usdz" style="display:none;"><img><span>View in AR</span></a>
+		<a class="ar_btn unselectable" rel="ar" id="btnEnterARIOS_2"  href="Model/Fridge_Iphone_Mat2.usdz" style="display:none;"><img><span>View in AR</span></a>
+		<a class="ar_btn unselectable" id="btnEnterARIOS_3" rel="ar"  style="display:none;"><img><span>View in AR Chrome</span></a>
+		<!-- <a class="ar_btn unselectable" rel="ar" id="btnEnterARIOS"  href="Model/Edge_WM_AR.usdz" style="display:none;"><img><span>View in AR</span></a> -->
+
+	</div>
+
+	
+				<!--This Button is for Android-->
+				<div class="bottom_ar_section_mobile"><a class="ar_btn" id="AR_btn" target="_blank" style="display:none;">View in AR</a></div>
+
+				<!-- Warning Popup If not AR supported on IOSChrome -->
+				<div id="warning_center" class="warning-center" style="display: none;">
+					<div id="warning_AR_unavailable" class="warning-AR-unavailable">
+						AR UnAvailable.<br> Use Safari browser instead
+					</div>
+					<div id="warning_could_not_enter_AR" class="warning-could-not-enter-AR"></div>
+				</div>
+
+
+  <div id="v3d-container">
+		
+		<div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+
+		<div id="f1" class="instruct" style="display:none;">
+			Hold your phone pointing Ground / Flat Surface. Avoid shiny surfaces and floor. Wait for Placement Indicator.
+		</div>
+
+		<div id="f2" class="instruct" style="display:none;">Tap on Placement Indicator for AR</div>
+		<div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+		
+		<div class="not_allow_close" id="not_allow_close" style="display:none;">
+	  
+			<div class="instruct">
+				You are too close to the AR object<br />
+				Step back for better experience  
+			</div>
+
+		</div>
+		
+		<div class="pagination_wrapper" id="page_section">
+			
+			<ul class="pagination">
+				<li id="btn_1" style="display:none;"></li>
+				<li id="btn_2" style="display:none;"></li>
+				<!-- <li id="btn_3">3</li>
+				<li id="btn_4">4</li>
+				<li id="btn_5">5</li>
+				<li id="btn_6">6</li>
+				<li id="btn_7">7</li>
+				<li id="btn_8">8</li>
+				<li id="btn_9">9</li>
+				<li id="btn_10">10</li>
+				<li id="btn_11">11</li>
+				<li id="btn_12">12</li>
+				<li id="btn_13">13</li> -->
+			</ul>
+		</div>
+		
+		<ul class="top_menu">
+				<li id="btn_15">
+					<img src="./images/close.svg"  width="30" height="30">
+				</li>
+		</ul>
+		
+		<ul class="bottom_menu">
+				<li id="btn_14" style="display:none;">
+					<img src="./images/edit_icon.png"  width="30" height="30">
+				</li>
+		</ul>
+		
+		<div class="right_menu">
+			<ul>
+				<!-- <li id="btn_cp" class="btn_cp">Colors</li> -->
+				<li id="btn_dim" class="btn_dim" style="display:none;">Dimension</li>
+				<li id="btn_reset" class="btn_reset" style="display:none;">Reset</li>
+			</ul>
+		</div>
+		
+		
+		<!-- <div class="zoom">
+			<div class="zoom_wrapper">
+				<span class="btn_zoomin" id="btn_zoomin"></span>
+				<span class="btn_zoomout" id="btn_zoomout"></span>
+			</div>
+		</div> -->
+		
+		
+	
+  </div>
+  
+  <div id='doNotUseLandscape'></div>
+  <div id='webXRNotSupported'></div>
+  <div id='useChrome'>For AR experience please use Google Chrome</div>
+  <div id="enableWebGl"></div>
+  <div id='lightMessage'>AR experience is best viewed in natural and open lighting conditions.</div>
+  
+  
+			<!--This Button is for only Desktop view and it allows -->
+			<a class="ar_btn desktop_only" id="AR_btn_desktop">View in AR</a>
+			
+			<div class="qr_popup" id="qr_pop" style="display:none;">
+				<img src="images/close_white.svg" id="close_qr">
+				<div class="qr_img">
+					<img src="images/qr_code.png" style="width:100%;" />
+				</div>
+			</div>
+			
+  <span id="hamb" class="hamb" >
+	<img src="images/hamb.svg" id="hicon"  />
+	<img src="images/close_white.svg" style="display:none;" id="cicon" />
+  </span>
+  
+</body>
+
+</html>

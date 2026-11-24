@@ -1,0 +1,214 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="19.999999999999773" scrolly="-45" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="f6Y!gKiFALBhg=5H5/o@" x="110" y="50">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">FALSE</field>
+      <field name="BKG_TRANSPARENCY">TRUE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">FALSE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="false" scrollx="0" scrolly="43.99999999999949" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setObjTransform" id="?z0GgEJqLR]4niOaJ!gU" x="210" y="130">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+      <field name="MODE">position</field>
+      <field name="OFFSET">FALSE</field>
+      <value name="TARGETOBJ">
+        <shadow type="objectList" id="/x1OO+.;?Fjv;W[udP-y">
+          <field name="FIELDNAME">Camera</field>
+        </shadow>
+      </value>
+      <value name="X">
+        <block type="math_number" id="mKY!ceAIXs[R;Mk%o^Ka">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+      <value name="Y">
+        <block type="math_number" id="_w$hz$;vg;T7u:f,+6e(">
+          <field name="NUM">-3</field>
+        </block>
+      </value>
+      <value name="Z">
+        <block type="math_number" id="1oM?e4+OVnpG@3oLybBF">
+          <field name="NUM">6</field>
+        </block>
+      </value>
+      <next>
+        <block type="setObjTransform" id="Pn++4zY:f,bxXofG8kB9">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+          <field name="MODE">rotation</field>
+          <field name="OFFSET">FALSE</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="BbQ/=/4IgYV=uF]Nzv@Y">
+              <field name="FIELDNAME">Camera</field>
+            </shadow>
+          </value>
+          <value name="X">
+            <block type="angle" id="X=9oZ(MJFu:9H%+6gT=0">
+              <field name="ANGLE">75</field>
+            </block>
+          </value>
+          <value name="Y">
+            <block type="angle" id="IDH/x]RtYlOgi^4%CY]o">
+              <field name="ANGLE">0</field>
+            </block>
+          </value>
+          <value name="Z">
+            <block type="angle" id="6)HBs;,)ZcRJ8O(;,X$s">
+              <field name="ANGLE">0</field>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <tab name="Button Functions" type="SecondaryTab" active="true" scrollx="-105.9727650697946" scrolly="203.8116729589056" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="%QxO`38/78UYBA^tpArB" inline="false" x="130" y="-70">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Z1#R+YL.Y/5]0XE^z=qo">
+          <field name="FIELDNAME">1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="setObjTransform" id="YiXmlvn~H3*^Nk5)xR}Y">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+          <field name="MODE">position</field>
+          <field name="OFFSET">FALSE</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="qdhu_GY4QCK7|Eo^zwKt">
+              <field name="FIELDNAME">Camera</field>
+            </shadow>
+          </value>
+          <value name="X">
+            <block type="math_number" id="YeQ,Z+:cO73o{^i#eW`*">
+              <field name="NUM">-1</field>
+            </block>
+          </value>
+          <value name="Y">
+            <block type="math_number" id="P^%Y`@pB@X=kD:TC`6cl">
+              <field name="NUM">-0.5</field>
+            </block>
+          </value>
+          <value name="Z">
+            <block type="math_number" id="{uN}W6+mbOG4T5zHLkjh">
+              <field name="NUM">2.5</field>
+            </block>
+          </value>
+          <next>
+            <block type="setObjTransform" id="bzUFl:OsWB=4t{{F:h2n">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+              <field name="MODE">rotation</field>
+              <field name="OFFSET">FALSE</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id="5`p|X;+QC(5Dzw23,t8I">
+                  <field name="FIELDNAME">Camera</field>
+                </shadow>
+              </value>
+              <value name="X">
+                <block type="angle" id="ZD.IcUcS`@pCy[w~mlI_">
+                  <field name="ANGLE">0</field>
+                </block>
+              </value>
+              <value name="Y">
+                <block type="angle" id="btl_+c5H:xqBy,w.G^J.">
+                  <field name="ANGLE">45</field>
+                </block>
+              </value>
+              <value name="Z">
+                <block type="angle" id="NO~/;EQRe8MMy=nqc`-;">
+                  <field name="ANGLE">0</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="/EqJBk@eui@)BlF]W|a_" inline="false" x="930" y="50">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Vi4M=niAjE^ov.6/9*^I">
+          <field name="FIELDNAME">3</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="Fy(/qH_RLN*.YAE%o8;D" inline="false" x="130" y="130">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Q[z^Eltwn$_dCU;Rkan6">
+          <field name="FIELDNAME">2</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="setObjTransform" id="ZGr$l}DBhkIJ].R9m]J7">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+          <field name="MODE">position</field>
+          <field name="OFFSET">FALSE</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="%u!ZEs9pCs.o,5zU~|=a">
+              <field name="FIELDNAME">Camera</field>
+            </shadow>
+          </value>
+          <value name="X">
+            <block type="math_number" id="Kb.G(lNOqpp;r_4{R4N!">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+          <value name="Y">
+            <block type="math_number" id="yVfilt=(wmH4Z`Z7xYOu">
+              <field name="NUM">-1</field>
+            </block>
+          </value>
+          <value name="Z">
+            <block type="math_number" id=",O=S/[TlW`A{uF}XR/Q6">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="d^DfFWJDImdFTQ^H?i*V" inline="false" x="930" y="150">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="?|/rs-UXFiY%0VU`gg+$">
+          <field name="FIELDNAME">5</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="ec!u8]x2}-ex#yqpVMAO" inline="false" x="770" y="330">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="ZMap{k-[fK,lC6*pdNAM">
+          <field name="FIELDNAME">4</field>
+        </shadow>
+      </value>
+    </block>
+  </tab>
+  <editorsettings viewport-x="903.5999999999999" viewport-y="28" viewport-w="614.4" viewport-h="387.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

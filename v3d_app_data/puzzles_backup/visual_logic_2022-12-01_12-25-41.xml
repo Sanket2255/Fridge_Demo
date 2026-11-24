@@ -1,0 +1,238 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="19.999999999999773" scrolly="-45" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="f6Y!gKiFALBhg=5H5/o@" x="70" y="110">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">FALSE</field>
+      <field name="BKG_TRANSPARENCY">TRUE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">FALSE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="false" scrollx="0" scrolly="-5.684341886080802e-14" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setObjTransform" id="?z0GgEJqLR]4niOaJ!gU" x="150" y="170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+      <field name="MODE">position</field>
+      <field name="OFFSET">FALSE</field>
+      <value name="TARGETOBJ">
+        <shadow type="objectList" id="/x1OO+.;?Fjv;W[udP-y">
+          <field name="FIELDNAME">Camera</field>
+        </shadow>
+      </value>
+      <value name="X">
+        <block type="math_number" id="mKY!ceAIXs[R;Mk%o^Ka">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+      <value name="Y">
+        <block type="math_number" id="_w$hz$;vg;T7u:f,+6e(">
+          <field name="NUM">-3</field>
+        </block>
+      </value>
+      <value name="Z">
+        <block type="math_number" id="1oM?e4+OVnpG@3oLybBF">
+          <field name="NUM">6</field>
+        </block>
+      </value>
+    </block>
+  </tab>
+  <tab name="Button Functions" type="SecondaryTab" active="true" scrollx="-70.77275286276335" scrolly="-0.4999999999998863" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="objectList" id=";5,TvtwvteM8f*n;cL!`" x="390" y="-150">
+      <field name="FIELDNAME">&lt;none&gt;</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="%QxO`38/78UYBA^tpArB" inline="false" x="130" y="-70">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Z1#R+YL.Y/5]0XE^z=qo">
+          <field name="FIELDNAME">1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="(Lz=k/y#mm#w___|ee.#">
+          <value name="VALUE">
+            <shadow type="text" id="PS!:Z_F17s[us|D,5=,P">
+              <field name="TEXT">pressed</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="tweenCameraExt" id="KM7oIk8I2!cwYRLR18~{">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+              <field name="MOVEMENT_TYPE">LINEAR</field>
+              <value name="POSITION">
+                <block type="objectList" id="b{ii|:(l04(uJ(MH(wum">
+                  <field name="FIELDNAME">CamStartPoint</field>
+                </block>
+              </value>
+              <value name="LOOKAT">
+                <block type="objectList" id="[Oc!EGz+2P[1kpE{IY]=">
+                  <field name="FIELDNAME">Top_Door</field>
+                </block>
+              </value>
+              <value name="DURATION">
+                <shadow type="math_number" id="c(C.QaUwq[yA4K!Fz9YZ">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="console.log" id="z%o)=Nb%a+]cE8@z]mrj">
+                  <value name="VALUE">
+                    <shadow type="text" id="hu#)UZw9hTc|eEjRe_%d">
+                      <field name="TEXT">executed</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="Fy(/qH_RLN*.YAE%o8;D" inline="false" x="130" y="130">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Q[z^Eltwn$_dCU;Rkan6">
+          <field name="FIELDNAME">2</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="setCameraParam" id="IZYj?FTdR2gSF8dwtOoZ">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" type="FIELD_OF_VIEW"></mutation>
+          <field name="TYPE">FIELD_OF_VIEW</field>
+          <value name="FIELD_OF_VIEW">
+            <shadow type="math_number" id="|;gU%LZ;_xF}0V-mu/$-">
+              <field name="NUM">40</field>
+            </shadow>
+          </value>
+          <value name="OBJECT">
+            <shadow type="objectList" id="4D1/J$zG|fi;t9V*AO:3">
+              <field name="FIELDNAME">Camera</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="tweenCameraExt" id="(_5?qqde[yU})ZSP/VrW">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+              <field name="MOVEMENT_TYPE">LINEAR</field>
+              <value name="POSITION">
+                <block type="objectList" id="h^xYg{trXG@52PzZQW@u">
+                  <field name="FIELDNAME">topViewPoint</field>
+                </block>
+              </value>
+              <value name="LOOKAT">
+                <block type="objectList" id="*%Zrug}CQCWOdNdU;dJZ">
+                  <field name="FIELDNAME">Auriga Base.011</field>
+                </block>
+              </value>
+              <value name="DURATION">
+                <shadow type="math_number" id="sA_UoDdB6JZ19h,r[/4t">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="console.log" id="JPH%;5!BiC@zZ$~6h!Ki">
+                  <value name="VALUE">
+                    <shadow type="text" id="}b~_?m$F;ZG?+5qhi=0W">
+                      <field name="TEXT">executed</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id=")#%6.Mf09Bv-0UVv|Z-}" inline="false" x="150" y="330">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="$,$m*5m04}XH6Wb6czN{">
+          <field name="FIELDNAME">2</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="setCameraParam" id="}`D9j$X9r$Xu,~op].hA">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" type="FIELD_OF_VIEW"></mutation>
+          <field name="TYPE">FIELD_OF_VIEW</field>
+          <value name="FIELD_OF_VIEW">
+            <shadow type="math_number" id="oj`KWZmY)OoJAAs-gVt[">
+              <field name="NUM">40</field>
+            </shadow>
+          </value>
+          <value name="OBJECT">
+            <shadow type="objectList" id="G5kdVkskg_Ipz%80dIW2">
+              <field name="FIELDNAME">Camera</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="tweenCameraExt" id="LM.z05Le0e2hc}/S.K#g">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+              <field name="MOVEMENT_TYPE">LINEAR</field>
+              <value name="POSITION">
+                <block type="objectList" id="xiM7eeJnpx*1}Rj~YGG,">
+                  <field name="FIELDNAME">PanelOpenAnimation</field>
+                </block>
+              </value>
+              <value name="LOOKAT">
+                <block type="objectList" id="5qnTzuPU{_h*s/lg!$:W">
+                  <field name="FIELDNAME">Auriga Base.011</field>
+                </block>
+              </value>
+              <value name="DURATION">
+                <shadow type="math_number" id="9.~sy7v~rMUSdJjgTyVA">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="console.log" id="/)j)~?Ii{jWb;u5s3LT5">
+                  <value name="VALUE">
+                    <shadow type="text" id="~4UD%)}$1#AyCT3U[cn?">
+                      <field name="TEXT">executed</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="playAnimationAdv" id="osl[A7usUh_vpB]YFJpW">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="false"></mutation>
+                      <field name="REVERSED">FALSE</field>
+                      <field name="LOOP">LoopOnce</field>
+                      <value name="VALUE">
+                        <shadow type="animationList" id="AFY,guC:)%YO!,kM:nIt">
+                          <field name="FIELDNAME">Top_Door</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="playAnimationAdv" id="/2.6eJh=g~~5lyO3DKKE">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="false"></mutation>
+                          <field name="REVERSED">FALSE</field>
+                          <field name="LOOP">LoopOnce</field>
+                          <value name="VALUE">
+                            <shadow type="animationList" id="~*%F(W@js?^5QkdRXJI(">
+                              <field name="FIELDNAME">Inside_Spinner_1</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="903.5999999999999" viewport-y="28" viewport-w="614.4" viewport-h="387.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

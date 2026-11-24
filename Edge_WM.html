@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title> Godrej - Web AR Experience</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  
+  <!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#0048a5">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="generator" content="Verge3D 4.1.1">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#0048a5">
+  <meta name="theme-color" content="#ffffff">
+
+
+  
+  <script src="v3d.js"></script>
+  <script src="Edge_WM.js"></script>
+   <script src="main.js"></script>
+   
+     <link rel="stylesheet" type="text/css" href="Edge_WM.css">
+   
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	 
+	 <script src="js/custom.js"></script>
+	 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+	<link rel="shortcut icon" href="godrej.png" type="image/png" />
+	
+	
+	 <style>
+    video {
+      object-fit: cover;
+    }
+
+     video {
+        height: 100%;
+		width: 100%;
+      }
+	  
+	  .newtop{top:10px !important; z-index:999999 !important;}
+
+	  .custom_slider .newimg {width: auto !important;  height: 310px !important;}
+	  
+	  .newinst {top:265px !important;}
+	  
+	  
+  </style>
+
+</head>
+
+<body>
+
+<video style='display:none' playsinline autoplay  id='camera'></video>
+
+	<div class="company_name" id="company_name">
+		<div class="wrapper">
+			<img src="images/logo.svg" />
+			<div class="product_name">WS AXIS 6.5 PN2 T WNRD</div>
+		</div>
+	</div>
+	
+	<div class="button_group" id="button_group"  style="display:none;">
+
+				<!-- Below code is for only iOS AR and it should be exactly like as per below except file name.reality --->
+				<a class="ar_btn unselectable" rel="ar" id="btnEnterARIOS"  href="Model/Espolon_Tequila.reality#allowsContentScaling=0 " style="display:none;"><img><span>View in AR</span></a>
+				
+				<!--This Button is for Android-->
+				<a class="ar_btn" id="AR_btn" target="_blank" style="display:none;">View in AR</a>
+	
+	</div>
+
+
+  <div id="v3d-container">
+		
+		<div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+
+		<div id="f1" class="instruct" style="display:none;">
+			Hold your phone pointing Ground / Flat Surface. Avoid shiny surfaces and floor. Wait for Placement Indicator.
+		</div>
+
+		<div id="f2" class="instruct" style="display:none;">Tap on Placement Indicator for AR</div>
+		<div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+		
+		<div class="not_allow_close" id="not_allow_close" style="display:none;">
+	  
+			<div class="instruct">
+				You are too close to the AR object<br />
+				Step back for better experience  
+			</div>
+
+		</div>
+		
+		<div class="pagination_wrapper" id="page_section" style="display:none;">
+			
+			<ul class="pagination">
+				<li id="btn_1">1</li>
+				<li id="btn_2">2</li>
+				<li id="btn_3">3</li>
+				<li id="btn_4">4</li>
+				<li id="btn_5">5</li>
+				<li id="btn_6">6</li>
+				<li id="btn_7">7</li>
+				<li id="btn_8">8</li>
+				<li id="btn_9">9</li>
+				<li id="btn_10">10</li>
+				<li id="btn_11">11</li>
+				
+			</ul>
+			
+			
+			<div class="page_pop" id="page_pop1" style="display:none;">
+				<h3>Spin Lid & Spin Cover</h3>
+			</div>
+			<div class="page_pop" id="page_pop2" style="display:none;">
+				<h3>Spin Shower</h3>
+				<p>Unique spin shower rinse mechanism for better detergent removal.<p>
+			</div>
+			<div class="page_pop" id="page_pop3" style="display:none;">
+				<h3>Detachable Lid with Easy Placement on the Side</h3>
+			</div>
+			<div class="page_pop" id="page_pop4" style="display:none;">
+				<h3>Aqua Ripple Pulsator</h3>
+				<p>Creates infinite ripples in the water that ensure detergent mixes well & enters deep into the clothes, for a deep clean wash.</p>
+			</div>
+			<div class="page_pop" id="page_pop5" style="display:none;">
+				<h3>Force Stream</h3>
+				<p>Water gushes out at high pressure, to mix the detergent better & provide a hard hitting motion from the top as well.</p>
+			</div>
+			<div class="page_pop" id="page_pop6" style="display:none;">
+				<h3>Micro Lint Filter</h3>
+				<p>The filter traps the excess lint that larger loads tend to produce.</p>
+			</div>
+			<div class="page_pop" id="page_pop8" style="display:none;">
+				<h3>5 Year Wash Motor Warranty</h3>
+			</div>
+			<div class="page_pop" id="page_pop9" style="display:none;">
+				<h3>Active Soak upto 20 Min.</h3>
+				<p>Ditch the bucket ! Pre soak your clothes in the machine itself before the start of the wash cycle. The pulsator movement will also provide hand scrub action to loosen tough stains.</p>
+			</div>
+			<div class="page_pop" id="page_pop10" style="display:none;">
+				<h3>Wash Mode Selector</h3>
+				<p>Gentle, Regular, Strong</p>
+			</div>
+			<div class="page_pop" id="page_pop11" style="display:none;">
+				<h3>5 Min. Spin Timer</h3>
+			</div>
+			
+			
+			
+		</div>
+		
+		<div class="right_menu">
+			<ul>
+				<li id="btn_cp" class="btn_cp">Control Panel </li>
+				<li id="btn_dim" class="btn_dim">Dimension</li>
+				<li id="btn_reset" class="btn_reset">Reset</li>
+			</ul>
+		</div>
+		
+		
+		<div class="zoom">
+			<div class="zoom_wrapper">
+				<span class="btn_zoomin" id="btn_zoomin"></span>
+				<span class="btn_zoomout" id="btn_zoomout"></span>
+			</div>
+		</div>
+		
+		
+	
+  </div>
+  
+  <div id='doNotUseLandscape'></div>
+  <div id='webXRNotSupported'></div>
+  <div id='useChrome'>For AR experience please use Google Chrome</div>
+  <div id="enableWebGl"></div>
+  <div id='lightMessage'>AR experience is best viewed in natural and open lighting conditions.</div>
+  
+  
+			<!--This Button is for only Desktop view and it allows -->
+			<a class="ar_btn desktop_only" id="AR_btn_desktop">View in AR</a>
+			
+			<div class="qr_popup" id="qr_pop" style="display:none;">
+				<img src="images/close.svg" id="close_qr">
+				<div class="qr_img">
+					<img src="images/qr_code.png" style="width:100%;" />
+				</div>
+			</div>
+			
+  <span id="hamb" class="hamb" style="display:none;">
+	<img src="images/hamb.svg" id="hicon"  />
+	<img src="images/close_white.svg" style="display:none;" id="cicon" />
+  </span>
+  
+</body>
+
+</html>
